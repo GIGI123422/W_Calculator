@@ -5,15 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:W_Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580" Width="400">
+        Title="윈도우 계산기" Height="580" Width="400"
+        MinHeight="500" MinWidth="380">
     <DockPanel LastChildFill="True">
+        <!--메뉴-->
+        <Menu Padding="5" DockPanel.Dock="Top" Background="WhiteSmoke">
+            <MenuItem Header="선택">
+                <MenuItem Header="표준"/>
+                <MenuItem Header="공학용"/>
+                <MenuItem Header="프로그래머용"/>
+            </MenuItem>
+            <MenuItem Header="끝내기"></MenuItem>
+
+        </Menu>
         <!--결과창-->
         <Grid Height="100" DockPanel.Dock="Top" Background="WhiteSmoke">
-            <TextBox FontSize="16" HorizontalAlignment="Right" 
+            <TextBox x:Name="txtExp" FontSize="16" HorizontalAlignment="Right" 
                      BorderThickness="0"
-                     Margin="15" Text="1234" 
+                     Margin="15" Text="" 
                      Background="WhiteSmoke"></TextBox>
-            <TextBox FontSize="36" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+            <TextBox x:Name="txtResult" FontSize="36" HorizontalAlignment="Right" VerticalAlignment="Bottom"
                      BorderThickness="0"
                      FontWeight="Bold" Margin="15" Text="0" 
                      Background="WhiteSmoke"></TextBox>
@@ -27,12 +38,87 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="MC" FontSize="14" FontWeight="Bold" BorderThickness="0"></Button>
-            <Button Grid.Column="1" Content="MR" FontSize="14" FontWeight="Bold" BorderThickness="0"></Button>
+            <Button Grid.Column="0" Content="MC" FontSize="14" FontWeight="Bold" BorderThickness="0"
+                    Background="WhiteSmoke" x:Name="btnMC"></Button>
+            <Button Grid.Column="1" Content="MR" FontSize="14" FontWeight="Bold" BorderThickness="0"
+                    Background="WhiteSmoke" x:Name="btnMR"></Button>
+            <Button Grid.Column="2" Content="M+" FontSize="14" FontWeight="Bold" BorderThickness="0"
+                    Background="WhiteSmoke" x:Name="btnMPlus"></Button>
+            <Button Grid.Column="3" Content="M-" FontSize="14" FontWeight="Bold" BorderThickness="0"
+                    Background="WhiteSmoke" x:Name="btnMMinus"></Button>
+            <Button Grid.Column="4" Content="MS" FontSize="14" FontWeight="Bold" BorderThickness="0"
+                    Background="WhiteSmoke" x:Name="btnMS"></Button>
         </Grid>
         <!--버튼들-->
         <Grid>
-
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--첫번째 줄-->
+            <Button Grid.Row="0" Grid.Column="0" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnPersent">%</Button>
+            <Button Grid.Row="0" Grid.Column="1" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnSqrt">√</Button>
+            <Button Grid.Row="0" Grid.Column="2" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnSqr">x^2</Button>
+            <Button Grid.Row="0" Grid.Column="3" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnRecip">1/x</Button>
+            <!--두번째 줄-->
+            <Button Grid.Row="1" Grid.Column="0" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnCE">CE</Button>
+            <Button Grid.Row="1" Grid.Column="1" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnC">C</Button>
+            <Button Grid.Row="1" Grid.Column="2" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnDelete">Delete</Button>
+            <Button Grid.Row="1" Grid.Column="3" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" x:Name="btnDivide">÷</Button>
+            <!--세번째 줄-->
+            <Button Grid.Row="2" Grid.Column="0" Margin="2,1,1,1" 
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">7</Button>
+            <Button Grid.Row="2" Grid.Column="1" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">8</Button>
+            <Button Grid.Row="2" Grid.Column="2" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">9</Button>
+            <Button Grid.Row="2" Grid.Column="3" Margin="2,1,1,1" x:Name="btnTimes"
+                    FontSize="18" BorderThickness="0">x</Button>
+            <!--네번째 줄-->
+            <Button Grid.Row="3" Grid.Column="0" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">4</Button>
+            <Button Grid.Row="3" Grid.Column="1" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">5</Button>
+            <Button Grid.Row="3" Grid.Column="2" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">6</Button>
+            <Button Grid.Row="3" Grid.Column="3" Margin="2,1,1,1" x:Name="btnMinus"
+                    FontSize="18" BorderThickness="0">-</Button>
+            <!--다섯번째 줄-->
+            <Button Grid.Row="4" Grid.Column="0" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">1</Button>
+            <Button Grid.Row="4" Grid.Column="1" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">2</Button>
+            <Button Grid.Row="4" Grid.Column="2" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">3</Button>
+            <Button Grid.Row="4" Grid.Column="3" Margin="2,1,1,1" x:Name="btnPlus"
+                    FontSize="18" BorderThickness="0">+</Button>
+            <!--여섯번째 줄-->
+            <Button Grid.Row="5" Grid.Column="0" Margin="2,1,1,1" x:Name="btnPlusMinus"
+                    FontSize="18" BorderThickness="0">+/-</Button>
+            <Button Grid.Row="5" Grid.Column="1" Margin="2,1,1,1"
+                    FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">0</Button>
+            <Button Grid.Row="5" Grid.Column="2" Margin="2,1,1,1" x:Name="btnDot"
+                    FontSize="18" BorderThickness="0">.</Button>
+            <Button Grid.Row="5" Grid.Column="3" Margin="2,1,1,1" x:Name="btnEqual"
+                    FontSize="18" BorderThickness="0">=</Button>
         </Grid>
     </DockPanel>
     
