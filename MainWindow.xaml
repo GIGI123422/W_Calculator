@@ -81,43 +81,43 @@
                     FontSize="18" BorderThickness="0" x:Name="btnC">C</Button>
             <Button Grid.Row="1" Grid.Column="2" Margin="2,1,1,1"
                     FontSize="18" BorderThickness="0" x:Name="btnDelete">Delete</Button>
-            <Button Grid.Row="1" Grid.Column="3" Margin="2,1,1,1"
+            <Button Grid.Row="1" Grid.Column="3" Margin="2,1,1,1" Click="Op_Click" 
                     FontSize="18" BorderThickness="0" x:Name="btnDivide">÷</Button>
             <!--세번째 줄-->
-            <Button Grid.Row="2" Grid.Column="0" Margin="2,1,1,1" 
+            <Button Grid.Row="2" Grid.Column="0" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">7</Button>
-            <Button Grid.Row="2" Grid.Column="1" Margin="2,1,1,1"
+            <Button Grid.Row="2" Grid.Column="1" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">8</Button>
-            <Button Grid.Row="2" Grid.Column="2" Margin="2,1,1,1"
+            <Button Grid.Row="2" Grid.Column="2" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">9</Button>
-            <Button Grid.Row="2" Grid.Column="3" Margin="2,1,1,1" x:Name="btnTimes"
+            <Button Grid.Row="2" Grid.Column="3" Margin="2,1,1,1" x:Name="btnTimes" Click="Op_Click" 
                     FontSize="18" BorderThickness="0">x</Button>
             <!--네번째 줄-->
-            <Button Grid.Row="3" Grid.Column="0" Margin="2,1,1,1"
+            <Button Grid.Row="3" Grid.Column="0" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">4</Button>
-            <Button Grid.Row="3" Grid.Column="1" Margin="2,1,1,1"
+            <Button Grid.Row="3" Grid.Column="1" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">5</Button>
-            <Button Grid.Row="3" Grid.Column="2" Margin="2,1,1,1"
+            <Button Grid.Row="3" Grid.Column="2" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">6</Button>
-            <Button Grid.Row="3" Grid.Column="3" Margin="2,1,1,1" x:Name="btnMinus"
-                    FontSize="18" BorderThickness="0">-</Button>
+            <Button Grid.Row="3" Grid.Column="3" Margin="2,1,1,1" x:Name="btnMinus" Click="Op_Click" 
+                    FontSize="18" BorderThickness="0">-</Button> 
             <!--다섯번째 줄-->
-            <Button Grid.Row="4" Grid.Column="0" Margin="2,1,1,1"
+            <Button Grid.Row="4" Grid.Column="0" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">1</Button>
-            <Button Grid.Row="4" Grid.Column="1" Margin="2,1,1,1"
+            <Button Grid.Row="4" Grid.Column="1" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">2</Button>
-            <Button Grid.Row="4" Grid.Column="2" Margin="2,1,1,1"
+            <Button Grid.Row="4" Grid.Column="2" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">3</Button>
-            <Button Grid.Row="4" Grid.Column="3" Margin="2,1,1,1" x:Name="btnPlus"
+            <Button Grid.Row="4" Grid.Column="3" Margin="2,1,1,1" x:Name="btnPlus" Click="Op_Click" 
                     FontSize="18" BorderThickness="0">+</Button>
             <!--여섯번째 줄-->
-            <Button Grid.Row="5" Grid.Column="0" Margin="2,1,1,1" x:Name="btnPlusMinus"
+            <Button Grid.Row="5" Grid.Column="0" Margin="2,1,1,1" x:Name="btnPlusMinus" Click="btnPlusMinus_Click"
                     FontSize="18" BorderThickness="0">+/-</Button>
-            <Button Grid.Row="5" Grid.Column="1" Margin="2,1,1,1"
+            <Button Grid.Row="5" Grid.Column="1" Margin="2,1,1,1" Click="btn_Click"
                     FontSize="18" BorderThickness="0" Background="WhiteSmoke" FontWeight="Bold">0</Button>
-            <Button Grid.Row="5" Grid.Column="2" Margin="2,1,1,1" x:Name="btnDot"
+            <Button Grid.Row="5" Grid.Column="2" Margin="2,1,1,1" x:Name="btnDot" Click="btnDot_Click"
                     FontSize="18" BorderThickness="0">.</Button>
-            <Button Grid.Row="5" Grid.Column="3" Margin="2,1,1,1" x:Name="btnEqual"
+            <Button Grid.Row="5" Grid.Column="3" Margin="2,1,1,1" x:Name="btnEqual" Click="btnEqual_Click"
                     FontSize="18" BorderThickness="0">=</Button>
         </Grid>
     </DockPanel>
