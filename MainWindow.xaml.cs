@@ -76,7 +76,6 @@ namespace W_Calculator
         private void btnEqual_Click(object sender, RoutedEventArgs e)
         {
             double v = double.Parse(txtResult.Text);
-
             switch (op)
             {
                 case "+":
@@ -93,6 +92,47 @@ namespace W_Calculator
                     break;
             }
             txtExp.Text = saved + " " + op + v.ToString() + " =";
+        }
+
+        private void btnSqrt_Click(object sender, RoutedEventArgs e)
+        {
+            txtExp.Text = "√(" + txtResult.Text + ")";
+            txtResult.Text = Math.Sqrt(double.Parse(txtResult.Text)).ToString();
+        }
+
+        private void btnSqr_Click(object sender, RoutedEventArgs e)
+        {
+            txtExp.Text = "sqr(" + txtResult.Text + ")";
+            txtResult.Text = (double.Parse(txtResult.Text) * double.Parse(txtResult.Text)).ToString();
+        }
+
+        private void btnRecip_Click(object sender, RoutedEventArgs e)
+        {
+            txtExp.Text = "1 / (" + txtResult.Text + ")";
+            txtResult.Text = (1 / double.Parse(txtResult.Text)).ToString();
+        }
+
+        private void btnCE_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = "0";
+        }
+
+        private void btnC_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = "0";
+            txtExp.Text = "";
+            saved = 0;
+            opFlag = false;
+        }
+
+        // 맨 뒤의 글자 하나를 지운다
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            txtResult.Text = txtResult.Text.Remove(txtResult.Text.Length - 1);
+            if(txtResult.Text.Length == 0)
+            {
+                txtResult.Text = "0";
+            }
         }
     }
 }

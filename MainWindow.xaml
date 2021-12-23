@@ -66,20 +66,20 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <!--첫번째 줄-->
-            <Button Grid.Row="0" Grid.Column="0" Margin="2,1,1,1"
+            <Button Grid.Row="0" Grid.Column="0" Margin="2,1,1,1" 
                     FontSize="18" BorderThickness="0" x:Name="btnPersent">%</Button>
-            <Button Grid.Row="0" Grid.Column="1" Margin="2,1,1,1"
+            <Button Grid.Row="0" Grid.Column="1" Margin="2,1,1,1" Click="btnSqrt_Click"
                     FontSize="18" BorderThickness="0" x:Name="btnSqrt">√</Button>
-            <Button Grid.Row="0" Grid.Column="2" Margin="2,1,1,1"
+            <Button Grid.Row="0" Grid.Column="2" Margin="2,1,1,1" Click="btnSqr_Click"
                     FontSize="18" BorderThickness="0" x:Name="btnSqr">x^2</Button>
-            <Button Grid.Row="0" Grid.Column="3" Margin="2,1,1,1"
+            <Button Grid.Row="0" Grid.Column="3" Margin="2,1,1,1" Click="btnRecip_Click"
                     FontSize="18" BorderThickness="0" x:Name="btnRecip">1/x</Button>
             <!--두번째 줄-->
-            <Button Grid.Row="1" Grid.Column="0" Margin="2,1,1,1"
+            <Button Grid.Row="1" Grid.Column="0" Margin="2,1,1,1" Click="btnCE_Click"
                     FontSize="18" BorderThickness="0" x:Name="btnCE">CE</Button>
-            <Button Grid.Row="1" Grid.Column="1" Margin="2,1,1,1"
+            <Button Grid.Row="1" Grid.Column="1" Margin="2,1,1,1" Click="btnC_Click"
                     FontSize="18" BorderThickness="0" x:Name="btnC">C</Button>
-            <Button Grid.Row="1" Grid.Column="2" Margin="2,1,1,1"
+            <Button Grid.Row="1" Grid.Column="2" Margin="2,1,1,1" Click="btnDelete_Click"
                     FontSize="18" BorderThickness="0" x:Name="btnDelete">Delete</Button>
             <Button Grid.Row="1" Grid.Column="3" Margin="2,1,1,1" Click="Op_Click" 
                     FontSize="18" BorderThickness="0" x:Name="btnDivide">÷</Button>
